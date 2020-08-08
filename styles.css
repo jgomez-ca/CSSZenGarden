@@ -1,0 +1,447 @@
+/*-----------------------------------	
+	IMPORTS		
+-----------------------------------*/
+
+/*	Normalize.css from local file	*/
+@import url(normalize.css);	
+
+/*	Google Fonts	*/
+@import url('https://fonts.googleapis.com/css?family=Cabin|Comfortaa|Autour+One|Averia+Libre|Nunito|Ubuntu&display=swap');
+
+/*	FontAwesome	*/
+/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css');*/
+
+/*--------------------------------------------------------
+
+	GENERAL STYLING
+
+--------------------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+section {
+	font-weight: bolder;
+	background-image: url(images/header-576px.jpg);
+	background-color: #e1e1e1;
+	background-blend-mode: overlay;
+	background-size: 60%;
+	background-repeat: cover;
+	background-attachment: fixed;
+	border-right: 5px dashed black;
+	border-bottom: 2.5px dashed black;
+}
+
+h1 {
+	font-family: 'Autour One', Helvetica, sans-serif;
+	font-size: 2em;
+	text-shadow: 3px 2px lightgray;
+}
+
+h2 {
+	font-family: 'Averia Libre', Helvetica, sans-serif;
+	font-size: 1.5 em;
+	text-shadow: 3px 2px lightgray;
+}
+
+h3 {
+	font-family: 'Ubuntu', Helvetica, sans-serif;
+	font-size: 1.5 em;
+	text-shadow: 3px 2px lightgray;
+}
+
+a {
+	font-family: 'Autour One',cursive, monospace;
+	text-decoration: none;
+	color: darkblue;
+}
+
+abbr {
+	color: darkred;
+	font-weight: bold;
+}
+
+p {
+	font-family: 'Nunito', Helvetica, sans-serif;
+	font-weight: bolder;
+}
+
+.main{
+	border-left: 2.5px dashed black;
+	border-bottom: 5px dashed black;
+	background-image:url('images/body-1.jpg');
+	background-color: #e1e1e1;
+	background-blend-mode: overlay;
+	background-size: 300%;
+	background-repeat: cover;
+	background-attachment: fixed;
+}
+
+/*--------------------------------------------------------
+
+		This code was to insert some of the fontawesome icons
+		into the project.
+		Some of them where NOT rendering properly.
+		I decided not to waste time on this.
+
+		STARTS HERE
+
+	--------------------------------------------------------*/
+	/*
+	footer .zen-validate-html::after{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 1000;
+		content: '  \f121 ++  ';
+	}
+
+	footer .zen-validate-css::after{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 500;
+		content: '  \f1c9 ++  ';
+	}
+
+	footer .zen-license::after{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 500;
+		content: '  \f4f3 ++  ';
+	}
+
+	footer .zen-accessibility::after{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 500;
+		content: '\f29a';
+	}
+
+	footer .zen-github::after{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 500;
+		content: '\f09b';
+	}
+	*/
+
+.wrapper {
+	background-image: url('images/header-576px.jpg');
+	background-color: #e1e1e1;
+	background-blend-mode: overlay;
+	background-position: center;
+	background-size: 50%;
+	background-repeat: cover;
+	background-attachment: fixed;
+	}
+/*---------------------------------------------------------
+	MEDIA QUERIES START HERE
+---------------------------------------------------------*/
+
+/*  SETS SCREENS LESS THAN 240px		*/
+
+@media only screen and (max-width: 15em){
+	
+	body{
+		display: none;
+	}
+}
+
+
+/*  SETS SCREENS FROM 240px TO 767px 			*/
+
+@media only screen and (min-width: 15em){
+	
+	body{
+		margin: 20px;
+	}
+	
+	section{
+		border-right: 5px dashed black;
+		border-bottom: 2.5px dashed black;
+	}
+	
+	header{
+		width: 100%;
+		margin: 5px;
+	}
+
+	.summary p, .preamble p{
+		margin: 5px;
+	}
+	
+	.explanation, .participation, 
+	.benefits, .requirements{
+		width: 100%;
+		margin: 5px;
+	}
+	
+	.benefits{
+		border-right: 10px dotted black;
+		border-top: 10px dotted black;
+	}
+	
+	footer a{
+		display: block;
+		text-align: center;
+		font-size: 1.2em;
+	}
+	
+	.design-selection{
+		border-bottom: 2.5px dashed black;
+		border-left: 2.5px dashed black;
+	} 
+	
+	.design-archives{
+		border-right: 2.5px dashed black;
+	} 
+	
+	.zen-resources{
+		border-right: 2.5px dashed black;
+		border-bottom: 2.5px dashed black;
+	}
+
+}
+
+/*  SET SCREENS FROM 768px AN UP 			*/
+
+@media only screen and (min-width: 48em){
+	
+	section{
+		width: 100%;
+	}
+
+	section header{
+		float: right;
+		width: 75%;
+	}
+
+
+	.intro header h1{
+		font-size: 3em;
+	}
+
+	.intro header h2{
+		font-size: 2.5em;
+	}
+
+	.summary p{
+		padding: 1%;
+		float: left;
+		display: inline-block;
+		width: 46%;
+		margin: 2%;        
+		text-align: center;	
+	}
+
+	.summary::after{
+		content: close-quote;
+		display: table;
+		clear: both;
+	}
+
+	.preamble h3{
+		width: 85%;
+		float: right;
+		font-size: 2em;
+		text-align: left;
+	}
+
+	.preamble p{
+		float: left;
+		display: inline-block;
+		width: 29%;
+		margin: 2%;        
+		text-align: justify;
+	}
+
+	.preamble::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.explanation{
+		float: left;
+		width: 48%;
+		margin: 1%;
+	}
+
+	.explanation h3{
+		font-family: 'Ubuntu', Helvetica, sans-serif;
+		font-size: 2em;
+		text-shadow: 3px 2px gray;
+		text-align: right;
+	}
+
+	.explanation p{
+		display:block;
+		text-align: justify;
+	}
+
+	.participation{
+		float: left;
+		width: 48%;
+		margin: 1%;
+	}
+
+	.participation h3{
+		font-family: 'Ubuntu', Helvetica, sans-serif;
+		font-size: 2em;
+		text-shadow: 3px 2px gray;
+		text-align: left;
+	}
+	.participation p{
+		display: block;
+		text-align: justify;
+	}
+
+	.benefits{
+		float: right;
+		width: 48%;
+		padding: 1em;
+		border-right: none;
+	}
+
+	.benefits h3{
+		width:100%;
+		font-family: 'Ubuntu', Helvetica, sans-serif;
+		font-size: 2em;
+		text-shadow: 3px 2px gray;
+		text-align: left;
+	}
+
+	.benefits p{
+		float: left;
+		padding: 1em;        
+		text-align: justify;
+	}
+
+	.requirements{
+		float: left;
+		width: 48%;
+		padding: 1em;
+		border-right: 15px dotted black;
+	}
+
+	.requirements h3{
+		width: 100%;
+		float: left;
+		font-family: 'Ubuntu', Helvetica, sans-serif;
+		font-size: 2em;
+		text-shadow: 3px 2px gray;
+		text-align: left;
+	}
+
+	.requirements p{
+		float: left;
+		text-align: justify;
+	}
+
+	footer{
+		display: inline-block;
+		width: 100%;
+		padding: 1em;
+		border-top: 25px dotted black;
+		text-align: center; 
+		background-color: white;
+	}
+	
+	footer a{
+		display: inline-block;
+	}
+
+	footer .zen-validate-html::before{
+		content: " -- "; 
+	}
+
+	footer .zen-validate-html{
+		font-family: 'Ubuntu', Helvetica, monospace;
+		font-weight: bold;
+		color: darkred;
+		font-size: 2em; 
+	}
+
+	footer .zen-validate-html::after{
+		content: " -- "; 
+	}
+
+	footer .zen-validate-css{
+		font-family: 'Ubuntu', Helvetica, monospace;
+		font-weight: bold;
+		color: red;
+		font-size: 2em; 
+	}
+
+	footer .zen-validate-css::after{
+		content: " -- "; 
+	}
+
+	footer .zen-license{
+		font-family: 'Ubuntu', Helvetica, monospace;
+		font-weight: bold;
+		color: orangered;
+		font-size: 2em; 
+	}
+
+	footer .zen-license::after{
+		content: " -- "; 
+	}
+
+	footer .zen-accessibility{
+		font-family: 'Ubuntu', Helvetica, monospace;
+		font-weight: bold;
+		color: blue;
+		font-size: 2em; 
+	}
+
+	footer .zen-accessibility::after{
+		content: " -- "; 
+	}
+
+	footer .zen-github{
+		font-family: 'Ubuntu', Helvetica, monospace;
+		font-weight: bold;
+		color: darkorange;
+		font-size: 2em; 
+	}
+
+	footer .zen-github::after{
+		content: " --"; 
+	}
+
+	.footer::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	aside{
+		margin-bottom: 5em;
+	}
+	
+	.wrapper h3{
+		font-family: 'Comfortaa', Helvetica, sans-serif;
+		font-size: 2em;
+		text-shadow: 3px 2px gray;
+		text-align: left;
+	}
+
+	.design-selection {
+		float: right;
+		width: 50%;
+		padding: 1em;
+		border-bottom: 2.5px dashed black;
+		border-left: 2.5px dashed black;
+	}
+
+	.design-archives{
+		float: left;
+		width: 50%;
+		padding: 1em;
+	}
+
+	.zen-resources{
+		clear: both;
+		width: 100%;
+		padding: 1em;
+		border-right: 2.5px dashed black;
+		border-bottom: 2.5px dashed black;
+	}
+}
+
